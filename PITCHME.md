@@ -1,5 +1,112 @@
-
+---
 # DDD Introduction
+
+---
+# DDD Introduction
+DDD is NOT a technology NOR Methodology
+
+
+DDD is just a set of principles and patterns of design
+<!-- Most of time the principles/patterns tell you what you NOT to do instead what you do
+-->
+
+---
+# DDD is
+## Ubiquitous language cross
+* Business Analyst
+* Domain Expert
+* Developer
+
+---
+# Layed Architecture is not enough
+## Hexagonal/Onion Architecture 
+
+---
+# Why DDD
+## Other Patterns
+* Active Record
+* Table 
+* Domain 
+
+---
+# Demo
+## YearMonth
+
+
+--
+# Business Concepts
+## Oil Royalty 
+A royalty is the price the resource owner charges oil developers.
+Albertans own 81% of the province’s mineral rights and the Alberta government manages those resources on their behalf.
+
+--
+# Business Concepts
+## Royalty Calculation
+The Oil Royalty is calculated on various rates monthly. The month cycle is called production period.
+
+---
+
+# Royalty Class Design
+```csharp
+public class Royalty
+{
+    public decimal Amount {get; set;}
+    public DateTime ProductionPeriod {get; set;} 
+}
+```
+
+---
+## Why DDD
+# Modelling Paradigms
+ * Data Modelling 
+ * Object(-Oriented) Modelling 
+ * Service(-Oriented) Modelling
+
+http://www.agiledata.org/essays/drivingForces.html
+
+---
+# Why DDD
+## Data Modelling
+
+It is Mathematical Paradigm
+
+Database 
+
+Entity Relationship Diagram
+
+---
+# Why DDD
+## Data Modelling
+OO Modelling
+Engineering Paradigm
+DDD
+
+---
+# Why DDD
+## Service Modelling
+Used for exchanging information, then can be used to standardize the 
+XML 
+Json/GraphQL
+
+
+Example of standard of information format:
+
+https://www.oasis-open.org/standards
+
+OASIS is a nonprofit consortium that drives the development, convergence and adoption of open standards for the global information society.
+
+It almost covers every industrial include IT itself, e.g. SAML is standard from OASIS
+
+---
+# DDD Concepts
+
+---
+## DDD Concepts
+#Aggregate Root
+* Aggregate Root should/can know each other only (not children) and only through their Id's
+* Manipulate one Aggregate Root in on UnitWork/Transaction Scope
+* Talk other aggregate root by Messaging/Eventing system.
+* Aggregate Roots & Entities must be Persistence Agnostic 
 
 ---
 
