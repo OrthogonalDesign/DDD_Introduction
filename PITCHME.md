@@ -8,6 +8,11 @@ and explain the definitions here. I think you can find those by yourselves anywh
 Instead, I'd like to go deep on a couple 
 concerns about the DDD, and hope can give you a impression and let you feel
 about DDD.
+So instead of naming 'DDD Introduction', I would say it is just `DDD A Peek`
+
+---
+# DDD --Introduction-- A Peek
+
 ---
 ### What is DDD
 Not a technology or Methodology
@@ -63,32 +68,38 @@ Simple start and not problem at all, until more requirement coming
 ---
 ### YearMonth requirement
 * Get the next month of the given month
-* How many months between two given YearMonths  
 ...
 
 Note:
-Please be caution when looking the second requirement, 
-the first months is different from the second one, 
-so I just use the YearMonth as the name.
 In the real project, there are more requirements for sure.
-Here just list two as demo.
+Here just list one as a example.
 
 ---
 ### YearMonth Function Implementation
 ```CSharp
 public class YearMonthUtilities 
 {
-    public DateTime GetNextMonth(DateTime month)
+    public static DateTime GetNextMonth(DateTime month)
     {
         ...
     }
-    public int CalculateMonthDifferent(DateTime startMonth, DateTime endMonth)
+    
+    public static DateTime GetFirstDayOfTheMonth(DateTime date)
     {
         ...
     }
 }
 
 ```
+
+Note: 
+I am confident any developer know how to implement these two methods 
+and even did in the real project include myself.
+
+Please look at the second method, which is not from the requirement at all, 
+but I do need it, and it even used more often than other feature related functions.
+
+But do you see the problem now? 
 
 ---
 ### What is DDD
