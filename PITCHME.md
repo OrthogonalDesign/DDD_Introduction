@@ -118,29 +118,9 @@ you working on, you have no idea.
 public class YearMonth : IEquatable<YearMonth>, IComparable<YearMonth>
     {
         public YearMonth(int year, int month)
-        {
-            ...
-        }
         public YearMonth(DateTime date_time)
-        {
-            ...
-        }
-        public int Year { get { ... } }
-        public int Month { get { ... } }
         public DateTime as_date_Time()
-        {
-            return new DateTime(Year,Month,1);
-        }
- 
-        public YearMonth get_last()
-        {
-           ...
-        }
-        
         public YearMonth get_next()
-        {
-            ...
-        }
     }
 ```
 ---
