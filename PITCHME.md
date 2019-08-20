@@ -1,6 +1,6 @@
 ---
 # DDD 
-##Introduction
+## Introduction
 
 Note:
 DDD is a big topic and I will not go through the all concepts 
@@ -13,7 +13,7 @@ So instead of naming 'DDD Introduction', I would say it is just `DDD A Peek`
 
 ---
 # DDD
-##~~Introduction~~ 
+## ~~Introduction~~ 
 ## A Peek
 
 ---
@@ -43,8 +43,9 @@ Yes. We always implement the business logic in our code. So what is different.
 +++
 ### Example
 #### YearMonth
+Lot of business involves monthly processing:
 * Payroll Cycle 
-* Oil Royalty Product Period
+* Oil Royalty Product Period 
 ...
 
 Note:
@@ -55,7 +56,7 @@ so I just named it as the YearMonth to make it clearer.
 And most time our developer will simply use DateTime to represent this type, 
 like this:
 
----
++++
 ### YearMonth by DateTime
 ```CSharp
 public class Entity
@@ -68,7 +69,7 @@ public class Entity
 Note: 
 Simple start and not problem at all, until more requirement coming
 
----
++++
 ### YearMonth requirement
 * Get the next month of the given month
 ...
@@ -77,7 +78,7 @@ Note:
 In the real project, there are more requirements for sure.
 Here just list one as a example.
 
----
++++
 ### YearMonth Function Implementation
 ```CSharp
 public class YearMonthUtilities 
@@ -103,6 +104,10 @@ Please look at the second method, which is not from the requirement at all,
 but I do need it, and it even used more often than other feature related functions.
 
 But do you see the problem now? 
+
+* Because we use DateTime to represent YearMonth which is not exactly same thing which 
+bring some I called technical requirement (instead of business code) which is not actually
+necessary. 
 
 ---
 ### What is DDD
