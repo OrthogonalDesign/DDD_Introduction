@@ -2,7 +2,6 @@
 # DDD Introduction
 
 ---
-#### DDD Instroduction
 ### What is DDD
 Not a technology or Methodology
 
@@ -13,12 +12,12 @@ Most of time the principles/patterns tell you
 what you NOT to do instead what you do
 
 ---
-#### What is DDD
-### DDD is Ubiquitous language
-It is a bridge between
-* Business Analyst
-* Domain Expert
-* Developer
+### What is DDD
+* Ubiquitous language
+* A bridge which connects:
+    * Business Analyst
+    * Domain Expert
+    * Developer
 
 ---
 # Layed Architecture is not enough
