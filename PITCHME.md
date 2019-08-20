@@ -20,6 +20,19 @@ what you NOT to do instead what you do
     * Developer
 
 ---
+#### Why DDD
+
+The business logic is the hard part of the software
+But it is also the core value of the software
+
+Note:
+The DDD is a way to seperate the business from technical concern.
+
++++
+#### Example
+##### YearMonth
+
+---
 # Layed Architecture is not enough
 ## Hexagonal/Onion Architecture 
 
@@ -31,11 +44,6 @@ what you NOT to do instead what you do
 * Domain 
 
 ---
-# Demo
-## YearMonth
-
-
---
 # Business Concepts
 ## Oil Royalty 
 A royalty is the price the resource owner charges oil developers.
