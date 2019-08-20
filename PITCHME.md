@@ -1,6 +1,13 @@
 ---
 # DDD Introduction
 
+Note:
+DDD is a big topic and I will not go through the all concepts 
+(Entity, Value Object, Aggregation ...) of DDD
+and explain the definitions here. I think you can find those by yourselves anywhere.
+Instead, I'd like to go deep on a couple 
+concerns about the DDD, and hope can give you a impression and let you feel
+about DDD.
 ---
 ### What is DDD
 Not a technology or Methodology
@@ -8,8 +15,82 @@ Not a technology or Methodology
 But a set of principles and patterns for design
 
 Note:
-Most of time the principles/patterns tell you 
-what you NOT to do instead what you do
+Actually DDD is just Object-Oriented Programing, 
+but guides for design decision. Design is architect.
+
+And sometimes the principles/patterns are
+not only tell you what you supposed to do 
+but also what you are NOT supposed to do
+
+
+
+---
+### Why DDD
+
+The business logic is the hard part of the software
+But it is also the core value of the software
+
+Note:
+OK. So that is not what we doing now?
+Yes. We always implement the business logic in our code. So what is different.
+
++++
+#### Example
+##### YearMonth
+* Payroll Cycle 
+* Oil Royalty Product Period
+...
+
+Note:
+There are lot of scenario which use the month as a unit period, 
+the month here is different from the month part of a date, 
+so I just named it as the YearMonth to make it clearer.
+
+And most time our developer will simply use DateTime to represent this type, 
+like this:
+
+---
+#### YearMonth by DateTime
+```CSharp
+public class Entity
+{
+    property DateTime Period {get; set;}
+}
+
+```
+
+Note: 
+Simple start and not problem at all, until more requirement coming
+
+---
+#### YearMonth requirement
+* Get the next month of the given month
+* How many months between two given YearMonths  
+...
+
+Note:
+Please be caution when looking the second requirement, 
+the first months is different from the second one, 
+so I just use the YearMonth as the name.
+In the real project, there are more requirements for sure.
+Here just list two as demo.
+
+---
+#### YearMonth Function Implementation
+```CSharp
+public class YearMonthUtilities 
+{
+    public DateTime GetNextMonth(DateTime month)
+    {
+        ...
+    }
+    public int CalculateMonthDifferent(DateTime startMonth, DateTime endMonth)
+    {
+        ...
+    }
+}
+
+```
 
 ---
 ### What is DDD
@@ -18,20 +99,6 @@ what you NOT to do instead what you do
     * Business Analyst
     * Domain Expert
     * Developer
-
----
-#### Why DDD
-
-The business logic is the hard part of the software
-But it is also the core value of the software
-
-Note:
-The DDD is a way to seperate the business from technical concern.
-
-+++
-#### Example
-##### YearMonth
-
 ---
 # Layed Architecture is not enough
 ## Hexagonal/Onion Architecture 
