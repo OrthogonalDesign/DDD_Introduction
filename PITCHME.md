@@ -22,8 +22,6 @@ And sometimes the principles/patterns are
 not only tell you what you supposed to do 
 but also what you are NOT supposed to do
 
-
-
 ---
 ### Why DDD
 
@@ -35,8 +33,8 @@ OK. So that is not what we doing now?
 Yes. We always implement the business logic in our code. So what is different.
 
 +++
-#### Example
-##### YearMonth
+### Example
+#### YearMonth
 * Payroll Cycle 
 * Oil Royalty Product Period
 ...
@@ -50,7 +48,7 @@ And most time our developer will simply use DateTime to represent this type,
 like this:
 
 ---
-#### YearMonth by DateTime
+### YearMonth by DateTime
 ```CSharp
 public class Entity
 {
@@ -63,7 +61,7 @@ Note:
 Simple start and not problem at all, until more requirement coming
 
 ---
-#### YearMonth requirement
+### YearMonth requirement
 * Get the next month of the given month
 * How many months between two given YearMonths  
 ...
@@ -76,7 +74,7 @@ In the real project, there are more requirements for sure.
 Here just list two as demo.
 
 ---
-#### YearMonth Function Implementation
+### YearMonth Function Implementation
 ```CSharp
 public class YearMonthUtilities 
 {
