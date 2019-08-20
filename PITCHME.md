@@ -2,16 +2,20 @@
 # DDD Introduction
 
 ---
-### DDD Introduction
-- DDD is NOT a technology NOR Methodology
-- DDD is just a set of principles and patterns of design
+#### DDD Instroduction
+### What is DDD
+Not a technology or Methodology
+
+But a set of principles and patterns for design
 
 Note:
-
-Most of time the principles/patterns tell you what you NOT to do instead what you do
+Most of time the principles/patterns tell you 
+what you NOT to do instead what you do
 
 ---
+#### What is DDD
 ### DDD is Ubiquitous language
+It is a bridge between
 * Business Analyst
 * Domain Expert
 * Developer
