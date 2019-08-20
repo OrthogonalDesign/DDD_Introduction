@@ -7,8 +7,8 @@ DDD is NOT a technology NOR Methodology
 
 
 DDD is just a set of principles and patterns of design
-<!-- Most of time the principles/patterns tell you what you NOT to do instead what you do
--->
+Note:
+ Most of time the principles/patterns tell you what you NOT to do instead what you do
 
 ---
 # DDD is
