@@ -1,5 +1,6 @@
 ---
-# DDD Introduction
+# DDD 
+##Introduction
 
 Note:
 DDD is a big topic and I will not go through the all concepts 
@@ -11,7 +12,9 @@ about DDD.
 So instead of naming 'DDD Introduction', I would say it is just `DDD A Peek`
 
 ---
-# DDD --Introduction-- A Peek
+# DDD
+##~~Introduction~~ 
+## A Peek
 
 ---
 ### What is DDD
