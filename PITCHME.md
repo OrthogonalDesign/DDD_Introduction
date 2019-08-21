@@ -113,90 +113,92 @@ to the first day of the month, even it is already did before. Because from the s
 you working on, you have no idea.
 
 +++
-### YearMonth by Another Design Decision
+### YearMonth 
+#### Another Design Decision
 ```CSharp
-public class YearMonth : IEquatable<YearMonth>, IComparable<YearMonth>
-    {
-        public YearMonth(int year, int month)
-        public YearMonth(DateTime date_time)
-        public DateTime as_date_Time()
-        public YearMonth get_next()
-    }
+public class YearMonth 
+{
+    public YearMonth(int year, int month)
+    public YearMonth(DateTime date_time)
+    public DateTime as_date_Time()
+    public YearMonth get_next_month()
+}
 ```
+Note:
+Instead of just implementing the feature (get_next_month), I abstracted a concept 
+YearMonth in this solution, which is represented by the class/object. 
+With this simple change, I am modeling, and modelling loudly. 
+
+Actually that is DDD about, DDD is just the model driven engineering. And the term
+Domain Model is actually the pattern name in 
+Martin Fowler's book <Patterns of Enterprise Application Architecture>.
+
+With modeling, now we have our first member 
+in the *vocabulary* of our *ubiquitous* language now.
+
 ---
-### What is DDD
-* Ubiquitous language
+### What is DDD again
+#### Benefit
+* Ubiquitous language:  (YearMonth)
 * A bridge which connects:
     * Business Analyst
     * Domain Expert
     * Developer
+
 ---
+### Why DDD
+#### Different Modelling Paradigms
+ * Data(base) Modelling (Mathematical Paradigm)
+ * Object(-Oriented) Modelling 
+ * Service(-Oriented) Modelling
+ 
+Note:
+Most time when we say data modelling means database modelling which is mathematical paradigm,
+but DDD is Object modelling which is engineering paradigm.
+When we modelling in real project, we are kind of mixing the data modelling and object modelling
+that introduce confusion.
+For example, we use both one to many relationship and inheritance relationship on same diagram 
+which indicate in our mind we actually use both paradigms.
+
+Regarding this situation, the DDD just tell us that we should use object modelling without
+affected by database model at all. That is call persistence ignorance. 
+
+And BTW the repository is the pattern to abstract persistence layer, and repository itself 
+can be considered as the term of the DDD ubiquitous language.
+
+---
+### Freedom for Modelling
+
+Note:
+After get rid of the burden from database modelling, yes, I consider it as a burden.
+We are free to empower our model now.
+I just skip the long story and show you final picture of my YearMonth modelling.
+
++++
+#### Freedom for Modelling
+### YearMonthRange
+```CSharp
+var yearMonthRange = 2019.year(1).to(2019.year(10));
+
+//OR
+Januray.year(2019).to(October.year(2019)
+```
+
+Note:
+Based on the simple YearMonth object I showed before, I create another object YearMonthRange.
+The code is self explanation. 
+And some functions like
+
++++
+#### Freedom for Modelling
+### YearMonthRange
+```CSharp
+ 2019.year(1).to(2019.year(6))
+    .overlap(2019.year(4).to(2019.year(12)))
+       .ShouldEqual(2019.year(4).to(2019.year(6)));
+```
+
 # Layed Architecture is not enough
 ## Hexagonal/Onion Architecture 
 
----
-#### Why DDD
-##### Other Patterns
-* Active Record
-* Table 
-* Domain 
-
----
-# Business Concepts
-## Oil Royalty 
-A royalty is the price the resource owner charges oil developers.
-Albertans own 81% of the province’s mineral rights and the Alberta government manages those resources on their behalf.
-
---
-# Business Concepts
-## Royalty Calculation
-The Oil Royalty is calculated on various rates monthly. The month cycle is called production period.
-
----
-
-# Royalty Class Design
-```csharp
-public class Royalty
-{
-    public decimal Amount {get; set;}
-    public DateTime ProductionPeriod {get; set;} 
-}
-```
-
----
-## Why DDD
-# Modelling Paradigms
- * Data Modelling 
- * Object(-Oriented) Modelling 
- * Service(-Oriented) Modelling
-
-http://www.agiledata.org/essays/drivingForces.html
-
----
-# Why DDD
-## Data Modelling
-
-It is Mathematical Paradigm
-
-Database 
-
-Entity Relationship Diagram
-
----
-# Why DDD again
-## Data Modelling
-OO Modelling
-Engineering Paradigm
-DDD
-
----
-# DDD Concepts
-
----
-## DDD Concepts
-#Aggregate Root
-* Aggregate Root should/can know each other only (not children) and only through their Id's
-* Manipulate one Aggregate Root in on UnitWork/Transaction Scope
-* Talk other aggregate root by Messaging/Eventing system.
-* Aggregate Roots & Entities must be Persistence Agnostic 
 
