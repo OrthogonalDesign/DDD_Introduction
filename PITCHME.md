@@ -213,6 +213,7 @@ And its a function ==>
 ### YearMonthMap
 A data/value on a period(YearMonthRange)
 * monthly salary: $5000 on Period (from Jan 2019 to Dec 2019)
+
 ```CSharp
 YearMonthMap<int> salary;
 salary.put(2019.year(1).to(2019.year(12), 5000);
@@ -227,14 +228,13 @@ $5000   |--------------...---|
 ```
 
 Note:
-
 YearMonthRange is not the end but a start, based on it, I created another object YearMonthMap
 The code above represent the data/diagram below.
 Now you can see, the data model is so complicated , but the code still clean enough.
 Image how we can reach this step by the utilities/method solution.
-
 BTW: All the codes are real code, and can be run through unit test. 
 
+--- 
 ### Value Object
 >An object that describes some characteristic or attribute but carries no concept of identity.
 from Eric Evans
@@ -252,5 +252,6 @@ Although the second one from Martin Fowler is easier to understand,
 but still not enough to tell you when and how to use value object 
 if I just show you at the beginning of the presentation.
 
+--- 
 # Q & A
 
