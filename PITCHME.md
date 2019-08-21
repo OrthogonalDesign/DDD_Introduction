@@ -6,10 +6,10 @@ Note:
 DDD is a big topic and I will not go through the all concepts 
 (Entity, Value Object, Aggregation ...) of DDD
 and explain the definitions here. I think you can find those by yourselves anywhere.
-Instead, I'd like to go deep on a couple 
-concerns about the DDD, and hope can give you a impression and let you feel
-about DDD.
-So instead of naming 'DDD Introduction', I would say it is just `DDD A Peek`
+Instead, I am going to pick a couple 
+small pieces from the DDD, and hope can give you a impression and you FEEL
+about it.
+So instead of say 'DDD Introduction', I would say it is `DDD A Peek`
 
 ---
 # DDD
@@ -28,27 +28,34 @@ but guides for design decision. Design is architect.
 
 And sometimes the principles/patterns are
 not only tell you what you supposed to do 
-but also what you are NOT supposed to do
+but also what you are NOT supposed to do.
+So I prefer say DDD help you to make design decision.
 
 ---
 ### Why DDD
-
 The business logic is the hard part of the software
 But it is also the core value of the software
 
+Domain Driven is Business Driven, 
+so the full name is Business Domain Driven Design.
+
 Note:
-OK. So that is not what we doing now?
-Yes. We always implement the business logic in our code. So what is different.
+OK. So is that not what we doing now?
+Yes. We always implement the business logic in our code. 
+But there is different way to do that, 
+different way is what I said design decision
 
 +++
 ### Example
 #### YearMonth
 Lot of business involves monthly processing:
-* Payroll Cycle 
 * Oil Royalty Product Period 
+* Payroll Cycle 
 ...
 
 Note:
+Let look a very simple example.
+
 There are lot of scenario which use the month as a unit period, 
 the month here is different from the month part of a date, 
 so I just named it as the YearMonth to make it clearer.
