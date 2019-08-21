@@ -46,7 +46,7 @@ But there is different way to do that,
 different way is what I said design decision
 
 +++
-### Example
+### “Talk is cheap. Show me the code.”
 #### YearMonth
 Lot of business involves monthly processing:
 * Oil Royalty Product Period 
@@ -263,10 +263,12 @@ Note:
 They just don't know what you need.
 
 --- 
-### DDD Original Layer Architecture
 ![Layer](assets/img/DDD-layered-architecture.png)
 
-### Improved Onion Layer Architecture
+Note:
+This is original Layered Architecture from Eric Evans 
+---
+#### Improved Onion Layer Architecture
 ![Onion](assets/img/Onion_Architecture_1.png)
 
 --- 
