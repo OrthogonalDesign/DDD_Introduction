@@ -6,8 +6,8 @@ Note:
 DDD is a big topic and I will not go through the all concepts 
 (Entity, Value Object, Aggregation ...) of DDD
 and explain the definitions here. I think you can find those by yourselves anywhere.
-Instead, I am going to pick a couple 
-small pieces from the DDD, and hope can give you a impression and you FEEL
+Instead, I am going to pick a 
+small piece from the DDD, and hope can give you a impression and you FEEL
 about it.
 So instead of say 'DDD Introduction', I would say it is `DDD A Peek`
 
@@ -215,7 +215,6 @@ And its a function ==>
 #### Freedom for Modelling again
 ### YearMonthMap
 A data/value on a period(YearMonthRange)
-e.g.
 * monthly salary: $5000 on Period (from Jan 2019 to Dec 2019)
 ```CSharp
 YearMonthMap<int> salary;
@@ -247,7 +246,11 @@ from Martin Fowler
 
 Note:
 So far, we just peek one piece of DDD today: Value Object
-# Layed Architecture is not enough
-## Hexagonal/Onion Architecture 
+But I think it is enough to open you mind.
+When we come back to look at the definition of Value Object. ^
 
+Although the second one from Martin Fowler is easier to understand, 
+but still not enough to you when and how to use value object.
+
+# Q & A
 
