@@ -177,6 +177,8 @@ I just skip the long story and show you final picture of my YearMonth modelling.
 +++
 #### Freedom for Modelling
 ### YearMonthRange
+A period from a start yearmonth to a end yearmonth
+Usage: Application effective period or similar qualification period
 ```CSharp
 var yearMonthRange = 2019.year(1).to(2019.year(10));
 
@@ -186,18 +188,34 @@ Januray.year(2019).to(October.year(2019)
 
 Note:
 Based on the simple YearMonth object I showed before, I create another object YearMonthRange.
-The code is self explanation. 
-And some functions like
+Another example is jetbrain licence valid period.
+
+And a function like
 
 +++
 #### Freedom for Modelling
-### YearMonthRange
+### YearMonthRange Overlap
 ```CSharp
  2019.year(1).to(2019.year(6))
     .overlap(2019.year(4).to(2019.year(12)))
-       .ShouldEqual(2019.year(4).to(2019.year(6)));
+       .ShouldEqual(2019.year(4).to(2019.year(6))); //Assert
 ```
-
+#### Freedom for Modelling again
+### YearMonthMap
+A data/value on a period(YearMonthRange)
+e.g.
+* monthly salary: $5000 on Period (from Jan 2019 to Dec 2019)
+```CSharp
+YearMonthMap<int> salary;
+salary.put(2019.year(1).to(2019.year(12), 5000);
+```
+$5000    |--------------...---|
+        |                    |
+        |                    |
+    ----+----+----+----...---+---
+       Jan                  Dec
+Note:
+YearMonthRange is not the end but a start, based on it, I created another object UearMonthMap
 # Layed Architecture is not enough
 ## Hexagonal/Onion Architecture 
 
