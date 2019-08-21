@@ -267,9 +267,20 @@ They just don't know what you need.
 
 Note:
 This is original Layered Architecture from Eric Evans 
+
 ---
 #### Improved Onion Layer Architecture
 ![Onion](assets/img/Onion_Architecture_1.png)
+
+Note: 
+Most importance factor in this diagram is that 
+the database is not the center, it is external.
+But because we still follow the Layered architecture,
+so this architecture implemented heavily on the Dependency Inversion principle.
+
+---
+#### Another diagram
+![Onion](assets/img/Onion_Architecture_2.png)
 
 --- 
 # Q & A
