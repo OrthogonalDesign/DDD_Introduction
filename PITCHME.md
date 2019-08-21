@@ -62,7 +62,13 @@ so I just named it as the YearMonth to make it clearer.
 
 And most time our developer will simply use DateTime to represent this type, 
 like this:
-
++++
+@snap[south span-100]
+public class Entity
+{
+    property DateTime Period {get; set;}
+}
+@snapend
 +++
 ### YearMonth by DateTime
 ```CSharp
