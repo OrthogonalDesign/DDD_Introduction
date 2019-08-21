@@ -216,14 +216,14 @@ A data/value on a period(YearMonthRange)
 ```CSharp
 YearMonthMap<int> salary;
 salary.put(2019.year(1).to(2019.year(12), 5000);
-```
 
-```markdown
+/*
 $5000   |--------------...---|
         |                    |
         |                    |
     ----+----+----+----...---+---
        Jan                  Dec
+*/
 ```
 
 Note:
