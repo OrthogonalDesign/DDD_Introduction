@@ -132,6 +132,7 @@ public class YearMonth
     public YearMonth get_next_month()
 }
 ```
+
 Note:
 Instead of just implementing the feature (get_next_month), I abstracted a concept 
 YearMonth in this solution, which is represented by the object. 
@@ -206,7 +207,8 @@ And its a function ==>
     .overlap(2019.year(4).to(2019.year(12)))
        .ShouldEqual(2019.year(4).to(2019.year(6))); //Assert
 ```
----
+
++++
 #### Freedom for Modelling again
 ### YearMonthMap
 A data/value on a period(YearMonthRange)
@@ -215,7 +217,8 @@ A data/value on a period(YearMonthRange)
 YearMonthMap<int> salary;
 salary.put(2019.year(1).to(2019.year(12), 5000);
 ```
-```
+
+```markdown
 $5000   |--------------...---|
         |                    |
         |                    |
@@ -224,6 +227,7 @@ $5000   |--------------...---|
 ```
 
 Note:
+
 YearMonthRange is not the end but a start, based on it, I created another object YearMonthMap
 The code above represent the data/diagram below.
 Now you can see, the data model is so complicated , but the code still clean enough.
