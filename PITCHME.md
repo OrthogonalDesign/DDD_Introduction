@@ -228,6 +228,7 @@ $5000   |--------------...---|
     ----+----+----+----...---+---
        Jan                  Dec
 ```
+
 Note:
 YearMonthRange is not the end but a start, based on it, I created another object YearMonthMap
 The code above represent the data/diagram below.
