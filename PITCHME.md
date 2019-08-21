@@ -269,7 +269,7 @@ Note:
 This is original Layered Architecture from Eric Evans 
 
 ---
-#### Improved Onion Layer Architecture
+#### Improved Onion Architecture
 ![Onion](assets/img/Onion_Architecture_1.png)
 
 Note: 
