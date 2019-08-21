@@ -32,7 +32,7 @@ but also what you are NOT supposed to do.
 So I prefer say DDD help you to make design decision.
 
 ---
-### Why DDD
+### What is DDD
 The business logic is the hard part of the software
 But it is also the core value of the software
 
@@ -176,9 +176,6 @@ which indicate in our mind we actually use both paradigms.
 Regarding this situation, the DDD just tell us that we should use object modelling without
 affected by database model at all. That is call persistence ignorance. 
 
-And BTW the repository is the pattern to abstract persistence layer, and repository itself 
-can be considered as the term of the DDD ubiquitous language.
-
 ---
 ### Freedom for Modelling
 
@@ -201,9 +198,10 @@ Januray.year(2019).to(October.year(2019)
 
 Note:
 Based on the simple YearMonth object I showed before, I create another object YearMonthRange.
+
 Another example is jetbrain licence valid period.
 
-And a function like
+And its a function ==>
 
 +++
 #### Freedom for Modelling
@@ -213,6 +211,7 @@ And a function like
     .overlap(2019.year(4).to(2019.year(12)))
        .ShouldEqual(2019.year(4).to(2019.year(6))); //Assert
 ```
+---
 #### Freedom for Modelling again
 ### YearMonthMap
 A data/value on a period(YearMonthRange)
@@ -222,13 +221,31 @@ e.g.
 YearMonthMap<int> salary;
 salary.put(2019.year(1).to(2019.year(12), 5000);
 ```
+```
 $5000   |--------------...---|
         |                    |
         |                    |
     ----+----+----+----...---+---
        Jan                  Dec
+```
 Note:
-YearMonthRange is not the end but a start, based on it, I created another object UearMonthMap
+YearMonthRange is not the end but a start, based on it, I created another object YearMonthMap
+The code above represent the data/diagram below.
+Now you can see, the data model is so complicated , but the code still clean enough.
+Image how we can reach this step by the utilities/method solution.
+
+BTW: All the codes are real code, and can be run through unit test. 
+
+### Value Object
+>An object that describes some characteristic or attribute but carries no concept of identity.
+from Eric Evans
+
+>Objects that matter only as the combination of their attributes.
+>Two value objects with the same values for all their attributes are considered equal.
+from Martin Fowler
+
+Note:
+So far, we just peek one piece of DDD today: Value Object
 # Layed Architecture is not enough
 ## Hexagonal/Onion Architecture 
 
