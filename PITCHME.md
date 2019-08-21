@@ -212,7 +212,6 @@ And its a function ==>
 #### Freedom for Modelling again
 ### YearMonthMap
 A data/value on a period(YearMonthRange)
-* monthly salary: $5000 on Period (from Jan 2019 to Dec 2019)
 
 ```CSharp
 YearMonthMap<int> salary;
