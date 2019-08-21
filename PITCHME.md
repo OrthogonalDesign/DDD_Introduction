@@ -237,11 +237,13 @@ BTW: All the codes are real code, and can be run through unit test.
 --- 
 ### Value Object
 >An object that describes some characteristic or attribute but carries no concept of identity.
-from Eric Evans
+
+--Eric Evans
 
 >Objects that matter only as the combination of their attributes.
 >Two value objects with the same values for all their attributes are considered equal.
-from Martin Fowler
+
+--Martin Fowler
 
 Note:
 So far, we just peek one piece of DDD today: Value Object
