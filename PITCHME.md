@@ -253,6 +253,22 @@ Although the second one from Martin Fowler is easier to understand,
 but still not enough to tell you when and how to use value object 
 if I just show you at the beginning of the presentation.
 
+---
+### Why we did utilities way
+* Reinvent wheel
+* Hard/Longer time to implement
+* Are you smarter than Microsoft?
+
+Note: 
+They just don't know what you need.
+
+--- 
+### DDD Original Layer Architecture
+![Layer](assets/img/DDD-layered-architecture.png)
+
+### Improved Onion Layer Architecture
+![Onion](assets/img/Onion_Architecture_1.png)
+
 --- 
 # Q & A
 
