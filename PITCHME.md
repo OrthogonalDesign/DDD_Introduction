@@ -62,15 +62,10 @@ so I just named it as the YearMonth to make it clearer.
 
 And most time our developer will simply use DateTime to represent this type, 
 like this:
-+++
-@snap[south span-100]
-public class Entity
-{
-    property DateTime Period {get; set;}
-}
-@snapend
+
 +++
 ### YearMonth by DateTime
+
 ```CSharp
 public class Entity
 {
@@ -139,7 +134,7 @@ public class YearMonth
 ```
 Note:
 Instead of just implementing the feature (get_next_month), I abstracted a concept 
-YearMonth in this solution, which is represented by the class/object. 
+YearMonth in this solution, which is represented by the object. 
 With this simple change, I am modeling, and modelling loudly. 
 
 Actually that is DDD about, DDD is just the model driven engineering. And the term
@@ -250,7 +245,8 @@ But I think it is enough to open you mind.
 When we come back to look at the definition of Value Object. ^
 
 Although the second one from Martin Fowler is easier to understand, 
-but still not enough to you when and how to use value object.
+but still not enough to tell you when and how to use value object 
+if I just show you at the beginning of the presentation.
 
 # Q & A
 
