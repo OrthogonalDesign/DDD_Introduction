@@ -266,7 +266,15 @@ They just don't know what you need.
 ![Layer](assets/img/DDD-layered-architecture.png)
 
 Note:
-This is original Layered Architecture from Eric Evans 
+This is original Layered Architecture from Eric Evans.
+
+Copied:
+the UI layer interacts to business logic, and business logic talks to the data layer, 
+and all the layers are mixed up and depend heavily on each other. 
+In 3-tier and n-tier architectures, none of the layers are independent; 
+this fact raises a separation of concerns. 
+Such systems are very hard to und erstand and maintain. 
+The drawback of this traditional architecture is unnecessary coupling.
 
 ---
 #### Improved Onion Architecture
@@ -278,9 +286,21 @@ the database is not the center, it is external.
 But because we still follow the Layered architecture,
 so this architecture implemented heavily on the Dependency Inversion principle.
 
+Copied:
+Most of the traditional architectures raise fundamental issues of tight coupling and separation of concerns. 
+Onion Architecture was introduced by Jeffrey Palermo 
+to provide a better way to build applications in perspective of 
+better testability, maintainability, and dependability. 
+Onion Architecture addresses the challenges 
+faced with 3-tier and n-tier architectures, and to provide a solution for common problems. 
+Onion architecture layers interact to each other by using the Interfaces.
+
 ---
 #### Another diagram
 ![Onion](assets/img/Onion_Architecture_2.png)
+
+Note:
+Start from the Onion architecture, we are ready for microservice architecture.
 
 --- 
 # Q & A
